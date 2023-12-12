@@ -3,11 +3,18 @@
 namespace Sparkinzy\DcatMarketPlace;
 
 use Dcat\Admin\Admin;
-use Dcat\Admin\Extend\ServiceProvider;
 use Illuminate\Support\Str;
+use Dcat\Admin\Enums\ExtensionType;
+use Dcat\Admin\Extend\ServiceProvider;
 
 class DcatMarketplaceServiceProvider extends ServiceProvider
 {
+
+    public function getExtensionType(): ExtensionType
+    {
+        return ExtensionType::ADDON;
+    }
+
     protected $js = [
     ];
     protected $css = [
